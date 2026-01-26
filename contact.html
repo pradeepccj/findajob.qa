@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FindAJob.qa</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #8a1538 0%, #8a1538 55%, white 55%, white 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: #ffcc00;
+        }
+        
+        .site-title h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .qa-domain {
+            color: #ffcc00;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #8a1538;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: #7a1332;
+        }
+        
+        .contact-header {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .contact-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            color: #0d4a8a;
+            margin-bottom: 20px;
+        }
+        
+        .contact-header p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            color: #8a1538;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #0d4a8a;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #8a1538;
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s;
+        }
+        
+        .contact-link:hover {
+            gap: 15px;
+        }
+        
+        /* Contact Form */
+        .contact-form-container {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+        }
+        
+        .contact-form-container h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: #0d4a8a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #0d4a8a;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #8a1538;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to right, #8a1538, #a51e44);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 40px auto 0;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(to right, #7a1332, #8a1538);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(138, 21, 56, 0.2);
+        }
+        
+        #form-message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .message-success {
+            background: #e7f4e9;
+            color: #2e7d32;
+            border: 1px solid #c8e6c9;
+        }
+        
+        .message-error {
+            background: #ffebee;
+            color: #c62828;
+            border: 1px solid #ffcdd2;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4ff 100%);
+            padding: 50px;
+            border-radius: 15px;
+            border: 2px solid #d1e3ff;
+        }
+        
+        .faq-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: #0d4a8a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0d4a8a;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #0d1b2a, #1a2c42);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a3c50;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .contact-header {
+                padding: 30px 20px;
+            }
+            
+            .contact-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="site-title">
+                        <h1>Contact FindAJob<span class="qa-domain">.qa</span></h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#search-container">Search Jobs</a>
+                    <a href="career-advice.html">Career Advice</a>
+                    <a href="about-us.html">About Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us for any questions, suggestions, or partnership opportunities.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>For general inquiries and support</p>
+                    <a href="mailto:info@findajob.qa" class="contact-link">
+                        info@findajob.qa <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Available Sunday to Thursday, 8AM-6PM</p>
+                    <a href="tel:+97412345678" class="contact-link">
+                        +974 1234 5678 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>For Employers</h3>
+                    <p>Post jobs or partnership inquiries</p>
+                    <a href="mailto:employers@findajob.qa" class="contact-link">
+                        employers@findajob.qa <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" class="form-control" required>
+                            <option value="">Select a category</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="job-seeker">Job Seeker Support</option>
+                            <option value="employer">Employer Inquiry</option>
+                            <option value="technical">Technical Issue</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="feedback">Feedback/Suggestion</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    
+                    <div id="form-message"></div>
+                </form>
+            </div>
+            
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h3>How do I post a job on FindAJob.qa?</h3>
+                    <p>Employers can contact us at employers@findajob.qa with job details. We'll review and post the job listing within 24 hours.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Are the job listings on your site free to apply?</h3>
+                    <p>Yes, all job listings on FindAJob.qa are free for job seekers to view and apply to.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How often are job listings updated?</h3>
+                    <p>We update our job listings daily to ensure you have access to the latest opportunities in Qatar.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I remove my job alert subscription?</h3>
+                    <p>Yes, you can unsubscribe from job alerts at any time by clicking the unsubscribe link in any job alert email.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FindAJob.qa</h3>
+                    <p style="color: #bbb;">Qatar's leading job portal connecting talent with opportunity.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#search-container">Search Jobs</a></li>
+                        <li><a href="career-advice.html">Career Advice</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FindAJob.qa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const category = document.getElementById('category').value;
+            const message = document.getElementById('message').value;
+            const formMessage = document.getElementById('form-message');
+            
+            // Basic validation
+            if (!name || !email || !subject || !category || !message) {
+                formMessage.textContent = 'Please fill in all required fields.';
+                formMessage.className = 'message-error';
+                formMessage.style.display = 'block';
+                return;
+            }
+            
+            // In a real website, this would send data to a server
+            // For demo purposes, we'll show a success message
+            
+            formMessage.textContent = 'Thank you! Your message has been sent. We will respond within 24 hours.';
+            formMessage.className = 'message-success';
+            formMessage.style.display = 'block';
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Scroll to message
+            formMessage.scrollIntoView({ behavior: 'smooth' });
+            
+            // Hide message after 10 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 10000);
+        });
+        
+        // Check URL for pre-filled subject
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const subject = urlParams.get('subject');
+            if (subject) {
+                document.getElementById('subject').value = decodeURIComponent(subject);
+                document.getElementById('category').value = 'employer';
+            }
+        });
+    </script>
+</body>
+</html>

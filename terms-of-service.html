@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - FindAJob.qa</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #8a1538 0%, #8a1538 55%, white 55%, white 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: #ffcc00;
+        }
+        
+        .site-title h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .qa-domain {
+            color: #ffcc00;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #8a1538;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: #7a1332;
+        }
+        
+        .terms-header {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .terms-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: #0d4a8a;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Terms Content */
+        .terms-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .terms-section {
+            margin-bottom: 35px;
+        }
+        
+        .terms-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #0d4a8a;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e5eb;
+        }
+        
+        .terms-section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .terms-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .terms-section li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .important-note {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffcc00;
+            margin: 20px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #0d1b2a, #1a2c42);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a3c50;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .terms-header, .terms-content {
+                padding: 30px 20px;
+            }
+            
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="site-title">
+                        <h1>Terms of Service - FindAJob<span class="qa-domain">.qa</span></h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#search-container">Search Jobs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="terms-header">
+                <h1>Terms of Service</h1>
+                <p class="last-updated"><strong>Last Updated:</strong> December 1, 2023</p>
+                <p>Please read these Terms of Service carefully before using FindAJob.qa.</p>
+            </div>
+            
+            <div class="terms-content">
+                <div class="terms-section">
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing and using FindAJob.qa, you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>2. Description of Service</h2>
+                    <p>FindAJob.qa provides a job search platform that:</p>
+                    <ul>
+                        <li>Lists job opportunities in Qatar</li>
+                        <li>Allows users to search and filter job listings</li>
+                        <li>Provides career advice and resources</li>
+                        <li>Connects job seekers with employers</li>
+                    </ul>
+                    <p>We aggregate job listings from various sources and provide links to external job application pages.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>3. User Responsibilities</h2>
+                    <p>As a user of our website, you agree to:</p>
+                    <ul>
+                        <li>Use the website only for lawful purposes</li>
+                        <li>Not engage in any fraudulent or deceptive activities</li>
+                        <li>Not attempt to interfere with website functionality</li>
+                        <li>Provide accurate information when subscribing to job alerts</li>
+                        <li>Respect intellectual property rights</li>
+                    </ul>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>4. Job Listings</h2>
+                    <p>Important information about our job listings:</p>
+                    <ul>
+                        <li>We display job listings from various sources</li>
+                        <li>We do not guarantee the accuracy or availability of job listings</li>
+                        <li>Application processes are handled by external employers</li>
+                        <li>We are not responsible for the hiring decisions of employers</li>
+                        <li>Job seekers should verify job details before applying</li>
+                    </ul>
+                    
+                    <div class="important-note">
+                        <p><strong>Important:</strong> FindAJob.qa is a job listing aggregator. We do not employ job seekers directly and are not responsible for employment contracts or working conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>5. Intellectual Property</h2>
+                    <p>The FindAJob.qa website, including its design, content, and functionality, is protected by copyright and other intellectual property laws.</p>
+                    <p>You may not:</p>
+                    <ul>
+                        <li>Copy, modify, or distribute website content without permission</li>
+                        <li>Use our branding or trademarks without authorization</li>
+                        <li>Scrape or collect data from our website automatically</li>
+                    </ul>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>6. Third-Party Links</h2>
+                    <p>Our website contains links to third-party websites:</p>
+                    <ul>
+                        <li>We are not responsible for the content of linked websites</li>
+                        <li>Third-party websites have their own terms and privacy policies</li>
+                        <li>We do not endorse or guarantee any third-party services</li>
+                    </ul>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>7. Limitation of Liability</h2>
+                    <p>FindAJob.qa and its operators shall not be liable for:</p>
+                    <ul>
+                        <li>Any inaccuracies in job listings</li>
+                        <li>Employment decisions made by employers</li>
+                        <li>Technical issues or website downtime</li>
+                        <li>Any damages arising from use of our website</li>
+                    </ul>
+                    <p>Our service is provided "as is" without warranties of any kind.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>8. Termination</h2>
+                    <p>We may terminate or suspend your access to our website:</p>
+                    <ul>
+                        <li>If you violate these Terms of Service</li>
+                        <li>For any reason with or without notice</li>
+                    </ul>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>9. Changes to Terms</h2>
+                    <p>We reserve the right to modify these Terms of Service at any time. We will notify users of significant changes by updating the "Last Updated" date on this page.</p>
+                    <p>Your continued use of the website after changes constitutes acceptance of the new terms.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>10. Governing Law</h2>
+                    <p>These Terms of Service shall be governed by and construed in accordance with the laws of the State of Qatar.</p>
+                </div>
+                
+                <div class="terms-section">
+                    <h2>11. Contact Information</h2>
+                    <p>For questions about these Terms of Service, please contact us:</p>
+                    <ul>
+                        <li><strong>Email:</strong> legal@findajob.qa</li>
+                        <li><strong>Phone:</strong> +974 1234 5678</li>
+                        <li><strong>Address:</strong> Doha, Qatar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FindAJob.qa</h3>
+                    <p style="color: #bbb;">Your trusted job portal in Qatar.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#search-container">Search Jobs</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FindAJob.qa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

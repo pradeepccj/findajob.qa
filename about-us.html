@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FindAJob.qa</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #8a1538 0%, #8a1538 55%, white 55%, white 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: #ffcc00;
+        }
+        
+        .site-title h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .qa-domain {
+            color: #ffcc00;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #8a1538;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: #7a1332;
+        }
+        
+        .about-header {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .about-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            color: #0d4a8a;
+            margin-bottom: 20px;
+        }
+        
+        .about-header p {
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .mission-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        
+        .mission-icon {
+            font-size: 3rem;
+            color: #8a1538;
+            margin-bottom: 20px;
+        }
+        
+        .mission-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #0d4a8a;
+            margin-bottom: 15px;
+        }
+        
+        /* Team Section */
+        .team-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4ff 100%);
+            padding: 50px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            text-align: center;
+            border: 2px solid #d1e3ff;
+        }
+        
+        .team-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: #0d4a8a;
+            margin-bottom: 30px;
+        }
+        
+        .team-section p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Contact CTA */
+        .contact-cta {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-cta h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: #0d4a8a;
+            margin-bottom: 20px;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(to right, #8a1538, #a51e44);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(138, 21, 56, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #0d1b2a, #1a2c42);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a3c50;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .about-header {
+                padding: 30px 20px;
+            }
+            
+            .about-header h1 {
+                font-size: 2.3rem;
+            }
+            
+            .mission-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-section, .contact-cta {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="site-title">
+                        <h1>About FindAJob<span class="qa-domain">.qa</span></h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#search-container">Search Jobs</a>
+                    <a href="career-advice.html">Career Advice</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="about-header">
+                <h1>About FindAJob.qa</h1>
+                <p>Qatar's leading job portal connecting talented professionals with top employers across all sectors.</p>
+            </div>
+            
+            <div class="mission-section">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To simplify job searching in Qatar and create meaningful connections between employers and job seekers.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become Qatar's most trusted job portal, helping thousands find their dream careers.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>Trust, transparency, and dedication to helping both employers and job seekers succeed.</p>
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <h2>Our Team</h2>
+                <p>We are a dedicated team passionate about connecting talent with opportunity in Qatar. With years of experience in recruitment and technology, we understand what both job seekers and employers need.</p>
+                <p>Our platform is designed to make job searching efficient and effective, whether you're looking for your first job or your next career move.</p>
+            </div>
+            
+            <div class="contact-cta">
+                <h2>Get In Touch</h2>
+                <p style="margin-bottom: 25px; color: #666;">Have questions or suggestions? We'd love to hear from you.</p>
+                <a href="contact.html" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FindAJob.qa</h3>
+                    <p style="color: #bbb;">Connecting talent with opportunity in Qatar.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#search-container">Search Jobs</a></li>
+                        <li><a href="career-advice.html">Career Advice</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FindAJob.qa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

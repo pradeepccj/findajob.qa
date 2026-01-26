@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - FindAJob.qa</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, #8a1538 0%, #8a1538 55%, white 55%, white 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+            color: #ffcc00;
+        }
+        
+        .site-title h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .qa-domain {
+            color: #ffcc00;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #8a1538;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: #7a1332;
+        }
+        
+        .policy-header {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .policy-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: #0d4a8a;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Policy Content */
+        .policy-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .policy-section {
+            margin-bottom: 35px;
+        }
+        
+        .policy-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #0d4a8a;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e5eb;
+        }
+        
+        .policy-section p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .policy-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .policy-section li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .highlight {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8a1538;
+            margin: 20px 0;
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4ff 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            border: 2px solid #d1e3ff;
+        }
+        
+        .contact-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0d4a8a;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #0d1b2a, #1a2c42);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffcc00;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a3c50;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .policy-header, .policy-content {
+                padding: 30px 20px;
+            }
+            
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="site-title">
+                        <h1>Privacy Policy - FindAJob<span class="qa-domain">.qa</span></h1>
+                    </div>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#search-container">Search Jobs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            
+            <div class="policy-header">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated"><strong>Last Updated:</strong> December 1, 2023</p>
+                <p>This Privacy Policy describes how FindAJob.qa collects, uses, and protects your personal information.</p>
+            </div>
+            
+            <div class="policy-content">
+                <div class="policy-section">
+                    <h2>1. Information We Collect</h2>
+                    <p>We collect the following types of information:</p>
+                    <ul>
+                        <li><strong>Personal Information:</strong> When you subscribe to job alerts, we collect your email address.</li>
+                        <li><strong>Usage Data:</strong> We collect information about how you interact with our website through cookies and analytics tools.</li>
+                        <li><strong>Device Information:</strong> We may collect information about your device, browser type, and IP address.</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>2. How We Use Your Information</h2>
+                    <p>We use your information for the following purposes:</p>
+                    <ul>
+                        <li>To send you job alerts and notifications</li>
+                        <li>To improve our website and services</li>
+                        <li>To analyze website traffic and user behavior</li>
+                        <li>To respond to your inquiries and provide customer support</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>3. Data Protection</h2>
+                    <p>We take the security of your data seriously:</p>
+                    <ul>
+                        <li>We implement appropriate technical and organizational measures to protect your data</li>
+                        <li>We do not sell, trade, or rent your personal information to third parties</li>
+                        <li>We retain your information only for as long as necessary to provide our services</li>
+                    </ul>
+                    
+                    <div class="highlight">
+                        <p><strong>Important:</strong> We use Google AdSense to display advertisements. Google may use cookies to serve ads based on your visit to our site and other sites on the internet.</p>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>4. Cookies</h2>
+                    <p>Our website uses cookies to:</p>
+                    <ul>
+                        <li>Remember your preferences and settings</li>
+                        <li>Analyze website traffic and usage patterns</li>
+                        <li>Serve relevant advertisements through Google AdSense</li>
+                    </ul>
+                    <p>You can control cookies through your browser settings. However, disabling cookies may affect your experience on our website.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>5. Third-Party Services</h2>
+                    <p>We use the following third-party services:</p>
+                    <ul>
+                        <li><strong>Google Analytics:</strong> For website traffic analysis</li>
+                        <li><strong>Google AdSense:</strong> For displaying advertisements</li>
+                        <li><strong>Email Service Providers:</strong> For sending job alerts</li>
+                    </ul>
+                    <p>These services have their own privacy policies which we encourage you to review.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>6. Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access the personal information we hold about you</li>
+                        <li>Request correction of inaccurate information</li>
+                        <li>Request deletion of your personal information</li>
+                        <li>Opt-out of marketing communications</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>7. Children's Privacy</h2>
+                    <p>Our website is not intended for children under 18 years of age. We do not knowingly collect personal information from children.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>8. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                    <ul>
+                        <li><strong>Email:</strong> privacy@findajob.qa</li>
+                        <li><strong>Phone:</strong> +974 1234 5678</li>
+                        <li><strong>Address:</strong> Doha, Qatar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FindAJob.qa</h3>
+                    <p style="color: #bbb;">Your trusted job portal in Qatar.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#search-container">Search Jobs</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FindAJob.qa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
